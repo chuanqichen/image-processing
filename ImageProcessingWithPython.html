@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- meta "search-domain" used for google site search function google_search() -->
     <meta name="search-domain" value="https://datacarpentry.org/image-processing">
-    <style class="anchorjs"></style><link rel="stylesheet" type="text/css" href="./Image Processing with Python_files/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="./Image Processing with Python_files/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="./Image Processing with Python_files/lesson.css">
-    <link rel="stylesheet" type="text/css" href="./Image Processing with Python_files/syntax.css">
-     <link rel="stylesheet" type="text/css" href="./Image Processing with Python_files/fonts.css">
+    <style class="anchorjs"></style><link rel="stylesheet" type="text/css" href="./ImageProcessingWithPython/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./ImageProcessingWithPython/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="./ImageProcessingWithPython/lesson.css">
+    <link rel="stylesheet" type="text/css" href="./ImageProcessingWithPython/syntax.css">
+     <link rel="stylesheet" type="text/css" href="./ImageProcessingWithPython/fonts.css">
     
     <link rel="license" href="https://datacarpentry.org/image-processing/aio/index.html#license-info">
 
@@ -110,7 +110,7 @@
       
       
       <a href="https://datacarpentry.org/" class="pull-left">
-        <img class="navbar-logo" src="./Image Processing with Python_files/dc-icon-black.svg" alt="Data Carpentry logo">
+        <img class="navbar-logo" src="./ImageProcessingWithPython/dc-icon-black.svg" alt="Data Carpentry logo">
       </a>
       
 
@@ -338,13 +338,13 @@ For example, we might be interested in automatically counting
 the number of bacterial colonies growing in a Petri dish,
 as shown in this image:</p>
 
-<p><img src="./Image Processing with Python_files/colonies-01.jpg" alt="Bacteria colony"></p>
+<p><img src="./ImageProcessingWithPython/colonies-01.jpg" alt="Bacteria colony"></p>
 
 <p>We could use image processing to find the colonies, count them,
 and then highlight their locations on the original image,
 resulting in an image like this:</p>
 
-<p><img src="./Image Processing with Python_files/colony-mask.png" alt="Colonies counted"></p>
+<p><img src="./ImageProcessingWithPython/colony-mask.png" alt="Colonies counted"></p>
 
 <blockquote class="callout">
   <h2 id="why-write-a-program-to-do-that">Why write a program to do that?<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#why-write-a-program-to-do-that" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -361,7 +361,7 @@ with Python and skimage:</p>
       <p>What if there are many more bacteria colonies in the Petri dish?
   For example, suppose the image looked like this:</p>
 
-      <p><img src="./Image Processing with Python_files/colonies-03.jpg" alt="Bacteria colony"></p>
+      <p><img src="./ImageProcessingWithPython/colonies-03.jpg" alt="Bacteria colony"></p>
 
       <p>Manually counting the colonies in that image would present more of a challenge.
   A Python program using skimage could count the number of colonies more accurately,
@@ -487,12 +487,12 @@ Each pixel can be thought of as a single square point of coloured light.</p>
 <p>For example, consider this image of a maize seedling,
 with a square area designated by a red box:</p>
 
-<p><img src="./Image Processing with Python_files/maize-seedling-original.jpg" alt="Original size image"></p>
+<p><img src="./ImageProcessingWithPython/maize-seedling-original.jpg" alt="Original size image"></p>
 
 <p>Now, if we zoomed in close enough to see the pixels in the red box,
 we would see something like this:</p>
 
-<p><img src="./Image Processing with Python_files/maize-seedling-enlarged.jpg" alt="Enlarged image area"></p>
+<p><img src="./ImageProcessingWithPython/maize-seedling-enlarged.jpg" alt="Enlarged image area"></p>
 
 <p>Note that each square in the enlarged image area - each pixel -
 is all one colour,
@@ -606,7 +606,7 @@ the <code class="language-plaintext highlighter-rouge">imshow</code> function fr
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/eight.png" alt="Image of 8"></p>
+<p><img src="./ImageProcessingWithPython/eight.png" alt="Image of 8"></p>
 
 <p>You might be thinking,
 “That does look vaguely like an eight,
@@ -674,7 +674,7 @@ The follwing line of code creates a new figure for imshow to use in displaying o
  [0. 0. 0.]]
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/zero.png" alt="Image of 0"></p>
+<p><img src="./ImageProcessingWithPython/zero.png" alt="Image of 0"></p>
 
 <blockquote class="callout">
   <h2 id="coordinate-system">Coordinate system<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#coordinate-system" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -689,21 +689,21 @@ is to assign a modified Cartesian coordinate system to the image.
 The coordinate system we usually see in mathematics has
 a horizontal x-axis and a vertical y-axis, like this:</p>
 
-  <p><img src="./Image Processing with Python_files/cartesian-coordinates.png" alt="Cartesian coordinate system"></p>
+  <p><img src="./ImageProcessingWithPython/cartesian-coordinates.png" alt="Cartesian coordinate system"></p>
 
   <p>The modified coordinate system used for our images will have only positive
 coordinates, the origin will be in the upper left corner instead of the
 centre, and y coordinate values will get larger as they go down instead of up,
 like this:</p>
 
-  <p><img src="./Image Processing with Python_files/image-coordinates.png" alt="Image coordinate system"></p>
+  <p><img src="./ImageProcessingWithPython/image-coordinates.png" alt="Image coordinate system"></p>
 
   <p>This is called a <em>left-hand coordinate system</em>.
 If you hold your left hand in front of your face and point your thumb at the floor,
 your extended index finger will correspond to the x-axis
 while your thumb represents the y-axis.</p>
 
-  <p><img src="./Image Processing with Python_files/left-hand-coordinates.png" alt="Left-hand coordinate system"></p>
+  <p><img src="./ImageProcessingWithPython/left-hand-coordinates.png" alt="Left-hand coordinate system"></p>
 
   <p>Until you have worked with images for a while,
 the most common mistake that you will make with coordinates is to forget
@@ -741,7 +741,7 @@ Display the image and print out the matrix as well.</p>
  [0. 0. 0.]]
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/five.png" alt="Image of 5"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/five.png" alt="Image of 5"></p>
   </blockquote>
 </blockquote>
 
@@ -766,7 +766,7 @@ Let’s try that out.</p>
 <span class="k">print</span><span class="p">(</span><span class="n">three_colours</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/three-colours.png" alt="Image of three colours"></p>
+<p><img src="./ImageProcessingWithPython/three-colours.png" alt="Image of three colours"></p>
 
 <p>We now have 3 colours, but are they the three colours you expected?
 They all appear to be on a continuum of dark purple on the low end and
@@ -798,7 +798,7 @@ a mapped continuum of intensities: greyscale.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">three_colours</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">gray</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/grayscale.png" alt="Image in greyscale"></p>
+<p><img src="./ImageProcessingWithPython/grayscale.png" alt="Image in greyscale"></p>
 
 <p>Above we have exactly the same underying data matrix, but in greyscale.
 Zero maps to black, 255 maps to white, and 128 maps to medium grey.
@@ -857,7 +857,7 @@ Rather than loading it from a file, we will generate this example using numpy.</
   [ 71  85  70]]]
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/checkerboard.png" alt="Image of checkerboard"></p>
+<p><img src="./ImageProcessingWithPython/checkerboard.png" alt="Image of checkerboard"></p>
 
 <p>Previously we had one number being mapped to one colour or intensity.
 Now we are combining the effect of 3 numbers to arrive at a single colour value.
@@ -893,18 +893,18 @@ a 1d matrix that has a one for the channel we want to keep and zeros for the res
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">red_channel</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="./Image Processing with Python_files/checkerboard-red-channel.png" alt="Image of red channel"></p>
+<p><img src="./ImageProcessingWithPython/checkerboard-red-channel.png" alt="Image of red channel"></p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">green_channel</span> <span class="o">=</span> <span class="n">checkerboard</span> <span class="o">*</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">green_channel</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="./Image Processing with Python_files/checkerboard-green-channel.png" alt="Image of green channel"></p>
+<p><img src="./ImageProcessingWithPython/checkerboard-green-channel.png" alt="Image of green channel"></p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">blue_channel</span> <span class="o">=</span> <span class="n">checkerboard</span> <span class="o">*</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blue_channel</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/checkerboard-blue-channel.png" alt="Image of blue channel"></p>
+<p><img src="./ImageProcessingWithPython/checkerboard-blue-channel.png" alt="Image of blue channel"></p>
 
 <p>If we look at the upper [1,3] square in all three figures,
 we can see each of those colour contributions in action.
@@ -986,7 +986,7 @@ their 24-bit RGB triplet values, and the colour itself.</p>
 <blockquote class="challenge">
   <h2 id="rgb-colour-table-optional-not-included-in-timing">RGB colour table (optional, not included in timing)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#rgb-colour-table-optional-not-included-in-timing" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 
-  <p><img src="./Image Processing with Python_files/colour-table.png" alt="RGB colour table"></p>
+  <p><img src="./ImageProcessingWithPython/colour-table.png" alt="RGB colour table"></p>
 
   <p>We cannot really provide a complete table.
 To see why, answer this question:
@@ -1345,18 +1345,18 @@ this is because the JPEG image was already in a compressed format.</p>
 Consider this image of several maize seedlings
 (scaled down here from 11,339 × 11,336 pixels in order to fit the display).</p>
 
-<p><img src="./Image Processing with Python_files/quality-original.jpg" alt="Original image"></p>
+<p><img src="./ImageProcessingWithPython/quality-original.jpg" alt="Original image"></p>
 
 <p>Now, let us zoom in and look at a small section of the label in the original,
 first in the uncompressed format:</p>
 
-<p><img src="./Image Processing with Python_files/quality-tif.jpg" alt="Enlarged, uncompressed"></p>
+<p><img src="./ImageProcessingWithPython/quality-tif.jpg" alt="Enlarged, uncompressed"></p>
 
 <p>Here is the same area of the image, but in JPEG format.
 We used a fairly aggressive compression parameter to make the JPEG,
 in order to illustrate the problems you might encounter with the format.</p>
 
-<p><img src="./Image Processing with Python_files/quality-jpg.jpg" alt="Enlarged, compressed"></p>
+<p><img src="./ImageProcessingWithPython/quality-jpg.jpg" alt="Enlarged, compressed"></p>
 
 <p>The JPEG image is of clearly inferior quality.
 It has less colour variation and noticeable pixelation.
@@ -1366,7 +1366,7 @@ A histogram shows how often each colour value appears in an image.
 The histograms for the uncompressed (left) and compressed (right) images
 are shown below:</p>
 
-<p><img src="./Image Processing with Python_files/quality-histogram.jpg" alt="Uncompressed histogram"></p>
+<p><img src="./ImageProcessingWithPython/quality-histogram.jpg" alt="Uncompressed histogram"></p>
 
 <p>We we learn how to make histograms such as these later on in the workshop.
 The differences in the colour histograms are even more apparent than in the
@@ -1790,7 +1790,7 @@ along with some new principles to a real world example.</p>
 We want to be able to focus our program’s attention on the roots themselves,
 while ignoring the black background.</p>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster.jpg" alt="Root cluster image"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster.jpg" alt="Root cluster image"></p>
 
 <p>Since the image is stored as an array of numbers,
 we can simply look through the array for pixel colour values that are
@@ -1834,7 +1834,7 @@ that 128 is set to zero.
 In this case,
 the result is an image in which the extraneous background detail has been removed.</p>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster-threshold.jpg" alt="Thresholded root image"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster-threshold.jpg" alt="Thresholded root image"></p>
 
 <h2 id="converting-colour-images-to-grayscale">Converting colour images to grayscale<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#converting-colour-images-to-grayscale" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 
@@ -1911,13 +1911,13 @@ the low intensity pixels while changing the high intensity ones.</p>
 
   <p>The file <code class="language-plaintext highlighter-rouge">data/sudoku.png</code> is an RGB image of a sudoku puzzle:</p>
 
-  <p><img src="./Image Processing with Python_files/sudoku.png" alt="Su-Do-Ku puzzle"></p>
+  <p><img src="./ImageProcessingWithPython/sudoku.png" alt="Su-Do-Ku puzzle"></p>
 
   <p>Your task is to turn all of the white pixels in the image to a light gray colour,
 say with the intensity of each formerly white pixel set to 64.
 The results should look like this:</p>
 
-  <p><img src="./Image Processing with Python_files/sudoku-gray.png" alt="Modified Su-Do-Ku puzzle"></p>
+  <p><img src="./ImageProcessingWithPython/sudoku-gray.png" alt="Modified Su-Do-Ku puzzle"></p>
 
   <p><em>Hint: this is an instance where it is helpful to convert the image from RGB to grayscale.</em></p>
 
@@ -1958,7 +1958,7 @@ are specified in <em>(r, g, b)</em> order when doing these manipulations.</p>
 sub-image with just the portion that says “odd + even = odd,” along with the
 red box that is drawn around the words.</p>
 
-<p><img src="./Image Processing with Python_files/board.jpg" alt="Whiteboard image"></p>
+<p><img src="./ImageProcessingWithPython/board.jpg" alt="Whiteboard image"></p>
 
 <p>Using the same display technique we have used throughout this course,
 we can determine the coordinates of the corners of the area we wish to extract
@@ -1968,7 +1968,7 @@ area with an upper-left coordinate of <em>(135, 60)</em>
 and a lower-right coordinate of <em>(480, 150)</em>,
 as shown in this version of the whiteboard picture:</p>
 
-<p><img src="./Image Processing with Python_files/board-coordinates.jpg" alt="Whiteboard coordinates"></p>
+<p><img src="./ImageProcessingWithPython/board-coordinates.jpg" alt="Whiteboard coordinates"></p>
 
 <p>Note that the coordinates in the preceding image are specified in <em>(cx, ry)</em> order.
 Now if our entire whiteboard image is stored as an skimage image named <code class="language-plaintext highlighter-rouge">image</code>,
@@ -2029,7 +2029,7 @@ In this case, the command “erases” that area of the whiteboard,
 replacing the words with a beige colour,
 as shown in the final image produced by the program:</p>
 
-<p><img src="./Image Processing with Python_files/board-final.jpg" alt="&quot;Erased&quot; whiteboard"></p>
+<p><img src="./ImageProcessingWithPython/board-final.jpg" alt="&quot;Erased&quot; whiteboard"></p>
 
 <blockquote class="challenge">
   <h2 id="practicing-with-slices-10-min---optional-not-included-in-timing">Practicing with slices (10 min - optional, not included in timing)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#practicing-with-slices-10-min---optional-not-included-in-timing" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2168,7 +2168,7 @@ skimage provides tools to do that.</p>
 
 <p>Consider this image of maize seedlings:</p>
 
-<p><img src="./Image Processing with Python_files/maize-seedlings.jpg" alt="Maize seedlings"></p>
+<p><img src="./ImageProcessingWithPython/maize-seedlings.jpg" alt="Maize seedlings"></p>
 
 <p>Now, suppose we want to analyze only the area of the image containing the roots
 themselves;
@@ -2241,7 +2241,7 @@ You could check this, e.g., by <code class="language-plaintext highlighter-rouge
 </code></pre></div></div>
 
 <p>Here is what our constructed mask looks like:
-<img src="./Image Processing with Python_files/maize-seedlings-mask.png" alt="Maize image mask" class="image-with-shadow"></p>
+<img src="./ImageProcessingWithPython/maize-seedlings-mask.png" alt="Maize image mask" class="image-with-shadow"></p>
 
 <p>The parameters of the <code class="language-plaintext highlighter-rouge">rectangle()</code> function <code class="language-plaintext highlighter-rouge">(357, 44)</code> and <code class="language-plaintext highlighter-rouge">(740, 720)</code>,
 are the coordinates of the upper-left (<code class="language-plaintext highlighter-rouge">start</code>) and lower-right (<code class="language-plaintext highlighter-rouge">end</code>) corners
@@ -2313,7 +2313,7 @@ and the (ry, cx) coordinate of the other end of the line.</p>
   <p>Now your task is to draw some other coloured shapes and lines on the image,
 perhaps something like this:</p>
 
-  <p><img src="./Image Processing with Python_files/drawing-practice.jpg" alt="Sample shapes"></p>
+  <p><img src="./ImageProcessingWithPython/drawing-practice.jpg" alt="Sample shapes"></p>
 
   <blockquote class="solution">
     <h2 id="solution">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#solution" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2470,7 +2470,7 @@ where the mask is <code class="language-plaintext highlighter-rouge">True</code>
 
 <p>The resulting masked image should look like this:</p>
 
-<p><img src="./Image Processing with Python_files/maize-seedlings-masked.jpg" alt="Applied mask"></p>
+<p><img src="./ImageProcessingWithPython/maize-seedlings-masked.jpg" alt="Applied mask"></p>
 
 <blockquote class="challenge">
   <h2 id="masking-an-image-of-your-own-optional-not-included-in-timing">Masking an image of your own (optional, not included in timing)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#masking-an-image-of-your-own-optional-not-included-in-timing" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2483,11 +2483,11 @@ Copy that image to your computer, write some code to make a mask,
 and apply it to select the part of the image containing your object.
 For example, here is an image of a remote control:</p>
 
-  <p><img src="./Image Processing with Python_files/remote-control.jpg" alt="Remote control image"></p>
+  <p><img src="./ImageProcessingWithPython/remote-control.jpg" alt="Remote control image"></p>
 
   <p>And, here is the end result of a program masking out everything but the remote:</p>
 
-  <p><img src="./Image Processing with Python_files/remote-control-masked.jpg" alt="Remote control masked"></p>
+  <p><img src="./ImageProcessingWithPython/remote-control-masked.jpg" alt="Remote control masked"></p>
 
   <blockquote class="solution">
     <h2 id="solution-2">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#solution-2" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2528,7 +2528,7 @@ Of course, your program should be tailored to your image.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div>  </div>
 
-  <p><img src="./Image Processing with Python_files/wellplate-01.jpg" alt="96-well plate"></p>
+  <p><img src="./ImageProcessingWithPython/wellplate-01.jpg" alt="96-well plate"></p>
 
   <p>Suppose that we are interested in the colours of the solutions in each of the wells.
 We <em>do not</em> care about the colour of the rest of the image,
@@ -2542,7 +2542,7 @@ You may assume that each of the wells has a radius of 16 pixels.</p>
 
   <p>Your program should produce output that looks like this:</p>
 
-  <p><img src="./Image Processing with Python_files/wellplate-01-masked.jpg" alt="Masked 96-well plate"></p>
+  <p><img src="./ImageProcessingWithPython/wellplate-01-masked.jpg" alt="Masked 96-well plate"></p>
 
   <blockquote class="solution">
     <h2 id="solution-3">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#solution-3" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2729,7 +2729,7 @@ and histograms are also quite handy as a preparatory step before performing
 <p>We will start with grayscale images and histograms first,
 and then move on to colour images.
 We will use this image of a plant seedling as an example:
-<img src="./Image Processing with Python_files/plant-seedling.jpg" alt="Plant seedling"></p>
+<img src="./ImageProcessingWithPython/plant-seedling.jpg" alt="Plant seedling"></p>
 
 <p>Here we load the image in grayscale instead of full colour, and display it:</p>
 
@@ -2747,7 +2747,7 @@ We will use this image of a plant seedling as an example:
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/plant-seedling-grayscale.png" alt="Plant seedling"></p>
+<p><img src="./ImageProcessingWithPython/plant-seedling-grayscale.png" alt="Plant seedling"></p>
 
 <p>In the program, we have a new import from <code class="language-plaintext highlighter-rouge">matplotlib</code>,
 to gain access to the tools we will use to draw the histogram.
@@ -2835,7 +2835,7 @@ indexing the <code class="language-plaintext highlighter-rouge">bin_edges</code>
 When we run the program on this image of a plant seedling,
 it produces this histogram:</p>
 
-<p><img src="./Image Processing with Python_files/plant-seedling-grayscale-histogram.png" alt="Plant seedling histogram"></p>
+<p><img src="./ImageProcessingWithPython/plant-seedling-grayscale-histogram.png" alt="Plant seedling histogram"></p>
 
 <blockquote class="callout">
   <h2 id="histograms-in-matplotlib">Histograms in matplotlib<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#histograms-in-matplotlib" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -2910,7 +2910,7 @@ it to the <code class="language-plaintext highlighter-rouge">np.histogram</code>
 
     <p style="display: none;">Your histogram of the masked area should look something like this:</p>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/plant-seedling-grayscale-histogram-mask.png" alt="Grayscale histogram of masked area"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/plant-seedling-grayscale-histogram-mask.png" alt="Grayscale histogram of masked area"></p>
   </blockquote>
 
 </blockquote>
@@ -3031,7 +3031,7 @@ Note the use of our loop variables, <code class="language-plaintext highlighter-
 
 <p>Finally we label our axes and display the histogram, shown here:</p>
 
-<p><img src="./Image Processing with Python_files/plant-seedling-colour-histogram.png" alt="Colour histogram"></p>
+<p><img src="./ImageProcessingWithPython/plant-seedling-colour-histogram.png" alt="Colour histogram"></p>
 
 <blockquote class="challenge">
   <h2 id="colour-histogram-with-a-mask-25-min">Colour histogram with a mask (25 min)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#colour-histogram-with-a-mask-25-min" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -3049,7 +3049,7 @@ various concentrations of hydrochloric acid and sodium hydroxide:</p>
 </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div>  </div>
-  <p><img src="./Image Processing with Python_files/wellplate-02.jpg" alt="Well plate image"></p>
+  <p><img src="./ImageProcessingWithPython/wellplate-02.jpg" alt="Well plate image"></p>
 
   <p>Suppose we are interested in the colour histogram of one of the sensors in the
 well plate image,
@@ -3063,11 +3063,11 @@ Then, use that mask to apply the colour histogram operation to that well.</p>
 
   <p>Your masked image should look like this:</p>
 
-  <p><img src="./Image Processing with Python_files/wellplate-02-masked.jpg" alt="Masked well plate"></p>
+  <p><img src="./ImageProcessingWithPython/wellplate-02-masked.jpg" alt="Masked well plate"></p>
 
   <p>And, the program should produce a colour histogram that looks like this:</p>
 
-  <p><img src="./Image Processing with Python_files/wellplate-02-histogram.png" alt="Well plate histogram"></p>
+  <p><img src="./ImageProcessingWithPython/wellplate-02-histogram.png" alt="Well plate histogram"></p>
 
   <blockquote class="solution">
     <h2 id="solution-1">Solution<span class="fold-unfold glyphicon glyphicon-collapse-down"></span><a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#solution-1" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -3248,14 +3248,14 @@ big, blobby, low spatial frequency features.</p>
 <p>Consider this image of a cat,
 in particular the area of the image outlined by the white square.</p>
 
-<p><img src="./Image Processing with Python_files/cat.jpg" alt="Cat image"></p>
+<p><img src="./ImageProcessingWithPython/cat.jpg" alt="Cat image"></p>
 
 <p>Now, zoom in on the area of the cat’s eye, as shown in the left-hand image below.
 When we apply a filter, we consider each pixel in the image, one at a time.
 In this example, the pixel we are currently working on is highlighted in red,
 as shown in the right-hand image.</p>
 
-<p><img src="./Image Processing with Python_files/cat-eye-pixels.jpg" alt="Cat eye pixels"></p>
+<p><img src="./ImageProcessingWithPython/cat-eye-pixels.jpg" alt="Cat eye pixels"></p>
 
 <p>When we apply a filter, we consider rectangular groups of pixels surrounding
 each pixel in the image, in turn.
@@ -3280,7 +3280,7 @@ that a larger kernel will blur the image more than a smaller kernel.</p>
 <p>To get an idea of how this works,
 consider this plot of the two-dimensional Gaussian function:</p>
 
-<p><img src="./Image Processing with Python_files/gaussian-kernel.png" alt="2D Gaussian function"></p>
+<p><img src="./ImageProcessingWithPython/gaussian-kernel.png" alt="2D Gaussian function"></p>
 
 <p>Imagine that plot laid over the kernel for the Gaussian blur filter.
 The height of the plot corresponds to the weight given to the underlying pixel
@@ -3298,7 +3298,7 @@ but this explanation gives you the basic idea.</p>
 consider the blue channel colour values from the seven-by-seven region
 of the cat image above:</p>
 
-<p><img src="./Image Processing with Python_files/cat-corner-blue.png" alt="Image corner pixels"></p>
+<p><img src="./ImageProcessingWithPython/cat-corner-blue.png" alt="Image corner pixels"></p>
 
 <p>The filter is going to determine the new blue channel value for the centre
 pixel – the one that currently has the value 86. The filter calculates a
@@ -3306,7 +3306,7 @@ weighted average of all the blue channel values in the kernel
 giving higher weight to the pixels near the centre of the
 kernel.</p>
 
-<p><img src="./Image Processing with Python_files/combination.png" alt="Image multiplication"></p>
+<p><img src="./ImageProcessingWithPython/combination.png" alt="Image multiplication"></p>
 
 <p>This weighted average, the sum of the multiplications,
 becomes the new value for the centre pixel (3, 3).
@@ -3374,7 +3374,7 @@ in <a href="https://scikit-image.org/docs/dev/user_guide">the skimage documentat
 <p>This animation shows how the blur kernel moves along in the original image in
 order to calculate the colour channel values for the blurred image.</p>
 
-<p><img src="./Image Processing with Python_files/blur-demo.gif" alt="Blur demo animation"></p>
+<p><img src="../fig/blur-demo.gif" alt="Blur demo animation"></p>
 
 <p>skimage has built-in functions to perform blurring for us, so we do not have to
 perform all of these mathematical operations ourselves. Let’s work through
@@ -3392,7 +3392,7 @@ an example of blurring an image with the skimage Gaussian blur function.</p>
 </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="./Image Processing with Python_files/gaussian-original.png" alt="Original image"></p>
+<p><img src="./ImageProcessingWithPython/gaussian-original.png" alt="Original image"></p>
 
 <p>Next, we apply the gaussian blur:</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sigma</span> <span class="o">=</span> <span class="mf">3.0</span>
@@ -3425,7 +3425,7 @@ to interpret our image, that has three dimensions, as a multichannel colour imag
 </span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blurred</span><span class="p">)</span>
 </code></pre></div></div>
-<p><img src="./Image Processing with Python_files/gaussian-blurred.png" alt="Original image"></p>
+<p><img src="./ImageProcessingWithPython/gaussian-blurred.png" alt="Original image"></p>
 
 <blockquote class="challenge">
   <h2 id="experimenting-with-sigma-values-10-min">Experimenting with sigma values (10 min)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#experimenting-with-sigma-values-10-min" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -3473,7 +3473,7 @@ For example, a sigma of 1.0 in the ry direction, and 6.0 in the cx direction.</p
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blurred</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/rectangle-gaussian-blurred.png" alt="Rectangular kernel blurred image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/rectangle-gaussian-blurred.png" alt="Rectangular kernel blurred image"></p>
 
     <p style="display: none;">These unequal sigma values produce a kernel that is rectangular instead of square.
 The result is an image that is much more blurred in the x direction than the
@@ -3615,7 +3615,7 @@ crudely cut shapes set against a white background.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p class="image-with-shadow"><img src="./Image Processing with Python_files/shapes-01.jpg" alt="Image with geometric shapes on white background"></p>
+<p class="image-with-shadow"><img src="./ImageProcessingWithPython/shapes-01.jpg" alt="Image with geometric shapes on white background"></p>
 
 <p>Now suppose we want to select only the shapes from the image.
 In other words, we want to leave the pixels belonging to the shapes “on,”
@@ -3641,7 +3641,7 @@ and de-noise it as in <a href="https://datacarpentry.org/image-processing/06-blu
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">blurred_image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p class="image-with-shadow"><img src="./Image Processing with Python_files/shapes-01-grayscale.png" alt="Grayscale image of the geometric shapes"></p>
+<p class="image-with-shadow"><img src="./ImageProcessingWithPython/shapes-01-grayscale.png" alt="Grayscale image of the geometric shapes"></p>
 
 <p>Next, we would like to apply the threshold <code class="language-plaintext highlighter-rouge">t</code> such that
 pixels with grayscale values on one side of <code class="language-plaintext highlighter-rouge">t</code> will be turned “on”,
@@ -3670,7 +3670,7 @@ or the background.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/shapes-01-histogram.png" alt="Grayscale histogram of the geometric shapes image"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-histogram.png" alt="Grayscale histogram of the geometric shapes image"></p>
 
 <p>Since the image has a white background,
 most of the pixels in the image are white.
@@ -3702,7 +3702,7 @@ where the <code class="language-plaintext highlighter-rouge">False</code> entrie
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/shapes-01-mask.png" alt="Binary mask of the geometric shapes created by thresholding"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-mask.png" alt="Binary mask of the geometric shapes created by thresholding"></p>
 
 <p>You can see that the areas where the shapes were in the original area are now white,
 while the rest of the mask image is black.</p>
@@ -3745,7 +3745,7 @@ What we are left with is only the coloured shapes from the original.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/shapes-01-selected.png" alt="Selected shapes after applying binary mask"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-selected.png" alt="Selected shapes after applying binary mask"></p>
 
 <blockquote class="challenge">
   <h2 id="more-practice-with-simple-thresholding-15-min">More practice with simple thresholding (15 min)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#more-practice-with-simple-thresholding-15-min" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -3753,7 +3753,7 @@ What we are left with is only the coloured shapes from the original.</p>
   <p>Now, it is your turn to practice. Suppose we want to use simple thresholding
 to select only the coloured shapes (in this particular case we consider grayish to be a colour, too) from the image <code class="language-plaintext highlighter-rouge">data/shapes-02.jpg</code>:</p>
 
-  <p><img src="./Image Processing with Python_files/shapes-02.jpg" alt="Another image with geometric shapes on white background"></p>
+  <p><img src="./ImageProcessingWithPython/shapes-02.jpg" alt="Another image with geometric shapes on white background"></p>
 
   <p>First, plot the grayscale histogram as in the <a href="https://datacarpentry.org/image-processing/05-creating-histograms/">Creating
 Histogram</a> episode and
@@ -3776,7 +3776,7 @@ you think would be a good value for the threshold <code class="language-plaintex
 <span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-02-histogram.png" alt="Grayscale histogram of the second geometric shapes image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-02-histogram.png" alt="Grayscale histogram of the second geometric shapes image"></p>
 
     <p style="display: none;">We can see a large spike around 0.3, and a smaller spike around 0.7. The
 spike near 0.3 represents the darker background, so it seems like a value
@@ -3803,7 +3803,7 @@ background.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-02-mask.png" alt="Binary mask created by thresholding the second geometric shapes image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-02-mask.png" alt="Binary mask created by thresholding the second geometric shapes image"></p>
 
     <p style="display: none;">And here are the commands to apply the mask and view the thresholded image</p>
     <div class="language-python highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code><span class="n">image</span> <span class="o">=</span> <span class="n">skimage</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">imread</span><span class="p">(</span><span class="s">"data/shapes-02.jpg"</span><span class="p">)</span>
@@ -3814,7 +3814,7 @@ background.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-02-selected.png" alt="Selected shapes after applying binary mask to the second geometric shapes image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-02-selected.png" alt="Selected shapes after applying binary mask to the second geometric shapes image"></p>
 
   </blockquote>
 </blockquote>
@@ -3847,7 +3847,7 @@ we have seen before in
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster.jpg" alt="Image of a maize root"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster.jpg" alt="Image of a maize root"></p>
 
 <p>We use Gaussian blur with a sigma of 1.0 to denoise the root image.
 Let us look at the grayscale histogram of the denoised image.</p>
@@ -3868,7 +3868,7 @@ Let us look at the grayscale histogram of the denoised image.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster-histogram.png" alt="Grayscale histogram of the maize root image"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster-histogram.png" alt="Grayscale histogram of the maize root image"></p>
 
 <p>The histogram has a significant peak around 0.2, and a second,
 smaller peak very near 1.0.
@@ -3905,7 +3905,7 @@ those below the threshold will be turned off.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster-mask.png" alt="Binary mask of the maize root system"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster-mask.png" alt="Binary mask of the maize root system"></p>
 
 <p>Finally, we use the mask to select the foreground:</p>
 
@@ -3917,7 +3917,7 @@ those below the threshold will be turned off.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/maize-root-cluster-selected.png" alt="Masked selection of the maize root system"></p>
+<p><img src="./ImageProcessingWithPython/maize-root-cluster-selected.png" alt="Masked selection of the maize root system"></p>
 
 <h2 id="application-measuring-root-mass">Application: measuring root mass<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#application-measuring-root-mass" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 
@@ -3930,7 +3930,7 @@ which you can find in the files
 <code class="language-plaintext highlighter-rouge">data/trial-216.jpg</code>,
 and <code class="language-plaintext highlighter-rouge">data/trial-293.jpg</code>.</p>
 
-<p><img src="./Image Processing with Python_files/four-maize-roots.jpg" alt="Four images of maize roots"></p>
+<p><img src="./ImageProcessingWithPython/four-maize-roots.jpg" alt="Four images of maize roots"></p>
 
 <p>Suppose we are interested in the amount of plant material in each image,
 and in particular how that amount changes from image to image.
@@ -4050,7 +4050,7 @@ data/trial-293.jpg,0.13607895611702128
 
   <p>Let us take a closer look at the binary masks produced by the <code class="language-plaintext highlighter-rouge">measure_root_mass</code> function.</p>
 
-  <p><img src="./Image Processing with Python_files/four-maize-roots-binary.jpg" alt="Binary masks of the four maize root images"></p>
+  <p><img src="./ImageProcessingWithPython/four-maize-roots-binary.jpg" alt="Binary masks of the four maize root images"></p>
 
   <p>You may have noticed in the section on automatic thresholding that
 the thresholded image does include regions of the image aside of the
@@ -4176,7 +4176,7 @@ Outlines still remain.
 However, we have reduced the number of extraneous pixels,
 which should make the output more accurate.</p>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/four-maize-roots-binary-improved.jpg" alt="Improved binary masks of the four maize root images"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/four-maize-roots-binary-improved.jpg" alt="Improved binary masks of the four maize root images"></p>
 
   </blockquote>
 </blockquote>
@@ -4186,7 +4186,7 @@ which should make the output more accurate.</p>
 
   <p>In the images directory <code class="language-plaintext highlighter-rouge">data/</code>, you will find an image named <code class="language-plaintext highlighter-rouge">colonies-01.tif</code>.</p>
 
-  <p><img src="./Image Processing with Python_files/colonies-01.jpg" alt="Image of bacteria colonies in a petri dish"></p>
+  <p><img src="./ImageProcessingWithPython/colonies-01.jpg" alt="Image of bacteria colonies in a petri dish"></p>
 
   <p>This is one of the images you will be working with in the
 morphometric challenge at the end of the workshop.</p>
@@ -4214,7 +4214,7 @@ colonies “on” while turning the rest of the pixels in the image
 <span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-histogram.png" alt="Grayscale histogram of the bacteria colonies image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-histogram.png" alt="Grayscale histogram of the bacteria colonies image"></p>
 
     <p style="display: none;">The peak near one corresponds to the white image background,
 and the broader peak around 0.5 corresponds to the yellow/brown
@@ -4232,7 +4232,7 @@ A reasonable choice thus might be to leave pixels below <code class="language-pl
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">binary_mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-mask.png" alt="Binary mask of the bacteria colonies image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-mask.png" alt="Binary mask of the bacteria colonies image"></p>
 
     <p style="display: none;">When you experiment with the threshold a bit, you can see that in
 particular the size of the bacteria colony near the edge of the
@@ -4315,11 +4315,11 @@ we have covered dividing an image into foreground and background pixels.
 In the shapes example image,
 we considered the coloured shapes as foreground <em>objects</em> on a white background.</p>
 
-<p class="image-with-shadow"><img src="./Image Processing with Python_files/shapes-01.jpg" alt="Original shapes image"></p>
+<p class="image-with-shadow"><img src="./ImageProcessingWithPython/shapes-01.jpg" alt="Original shapes image"></p>
 
 <p>In thresholding we went from the original image to this version:</p>
 
-<p><img src="./Image Processing with Python_files/shapes-01-mask.png" alt="Mask created by thresholding"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-mask.png" alt="Mask created by thresholding"></p>
 
 <p>Here, we created a mask that only highlights the parts of the image
 that we find interesting, the <em>objects</em>.
@@ -4630,7 +4630,7 @@ We can use the following commands to convert and show the image:</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">"off"</span><span class="p">);</span>
 </code></pre></div></div>
 
-<p><img src="./Image Processing with Python_files/shapes-01-labeled.png" alt="Labeled objects"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-labeled.png" alt="Labeled objects"></p>
 
 <blockquote class="challenge">
   <h2 id="how-many-objects-are-in-that-image-15-min">How many objects are in that image (15 min)<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="https://datacarpentry.org/image-processing/aio/index.html#how-many-objects-are-in-that-image-15-min" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
@@ -4691,7 +4691,7 @@ Where are the four additional objects?
 With a bit of detective work, we can spot some small objects in the image,
 for example, near the left border.</p>
 
-<p><img src="./Image Processing with Python_files/shapes-01-cca-detail.png" alt="shapes-01.jpg mask detail"></p>
+<p><img src="./ImageProcessingWithPython/shapes-01-cca-detail.png" alt="shapes-01.jpg mask detail"></p>
 
 <p>For us it is clear that these small spots are artifacts and
 not objects we are interested in.
@@ -4763,7 +4763,7 @@ of the object areas obtained with <code class="language-plaintext highlighter-ro
 <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">"Number of objects"</span><span class="p">);</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-01-areas-histogram.png" alt="Histogram of object areas"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-01-areas-histogram.png" alt="Histogram of object areas"></p>
 
     <p style="display: none;">The histogram shows the number of objects (vertical axis)
 whose area is within a certain range (horizontal axis).
@@ -4947,7 +4947,7 @@ display the resulting labeled image:</p>
 <span class="k">print</span><span class="p">(</span><span class="s">"Found"</span><span class="p">,</span> <span class="n">count</span><span class="p">,</span> <span class="s">"objects in the image."</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-01-filtered-objects.png" alt="Objects filtered by area"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-01-filtered-objects.png" alt="Objects filtered by area"></p>
 
     <div class="language-plaintext output highlighter-rouge" style="display: none;"><div class="highlight"><pre class="highlight"><code>Found 7 objects in the image.
 </code></pre></div>    </div>
@@ -4988,7 +4988,7 @@ the area by indexing the <code class="language-plaintext highlighter-rouge">obje
 <span class="n">plt</span><span class="p">.</span><span class="n">axis</span><span class="p">(</span><span class="s">"off"</span><span class="p">);</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/shapes-01-objects-coloured-by-area.png" alt="Objects colored by area"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/shapes-01-objects-coloured-by-area.png" alt="Objects colored by area"></p>
 
     <blockquote class="callout" style="display: none;">
       <p>You may have noticed that in the solution, we have used the
@@ -5079,11 +5079,11 @@ This challenge will be related to the shape of objects in images (<em>morphometr
 your morphometric challenge is to determine how many bacteria colonies are in
 each of these images:</p>
 
-<p><img src="./Image Processing with Python_files/colonies-01.jpg" alt="Colony image 1"></p>
+<p><img src="./ImageProcessingWithPython/colonies-01.jpg" alt="Colony image 1"></p>
 
-<p><img src="./Image Processing with Python_files/colonies-02.jpg" alt="Colony image 2"></p>
+<p><img src="./ImageProcessingWithPython/colonies-02.jpg" alt="Colony image 2"></p>
 
-<p><img src="./Image Processing with Python_files/colonies-03.jpg" alt="Colony image 3"></p>
+<p><img src="./ImageProcessingWithPython/colonies-03.jpg" alt="Colony image 3"></p>
 
 <p>The image files can be found at
 <code class="language-plaintext highlighter-rouge">data/colonies-01.tif</code>,
@@ -5098,7 +5098,7 @@ count the number of bacteria colonies in each image,
 and for each, produce a new image that highlights the colonies.
 The image should look similar to this one:</p>
 
-  <p><img src="./Image Processing with Python_files/colonies-01-summary.png" alt="Sample morphometric output"></p>
+  <p><img src="./ImageProcessingWithPython/colonies-01-summary.png" alt="Sample morphometric output"></p>
 
   <p>Additionally, print out the number of colonies for each image.</p>
 
@@ -5126,7 +5126,7 @@ so that it can be applied easily to any image file.</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">bacteria_image</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01.jpg" alt="Colony image 1"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01.jpg" alt="Colony image 1"></p>
 
     <p style="display: none;">Next, we need to threshold the image to create a mask that covers only
 the dark bacterial colonies.
@@ -5139,7 +5139,7 @@ This is easier using a grayscale image, so we convert it here:</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">gray_bacteria</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-gray.png" alt="Gray Colonies"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-gray.png" alt="Gray Colonies"></p>
 
     <p style="display: none;">Next, we blur the image and create a histogram:</p>
 
@@ -5153,7 +5153,7 @@ This is easier using a grayscale image, so we convert it here:</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-histogram.png" alt="Histogram image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-histogram.png" alt="Histogram image"></p>
 
     <p style="display: none;">In this histogram, we see three peaks -
 the left one (i.e. the darkest pixels) is our colonies,
@@ -5166,7 +5166,7 @@ Therefore, we choose a threshold that selects the small left peak:</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mask</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">"gray"</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-mask.png" alt="Colony mask image"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-mask.png" alt="Colony mask image"></p>
 
     <p style="display: none;">This mask shows us where the colonies are in the image -
 but how can we count how many there are?
@@ -5190,7 +5190,7 @@ the grayscale image:</p>
 <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">summary_image</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-summary.png" alt="Sample morphometric output"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-summary.png" alt="Sample morphometric output"></p>
 
     <p style="display: none;">Now that we’ve completed the task for one image,
 we need to repeat this for the remaining two images.
@@ -5217,9 +5217,9 @@ This is a good point to collect the lines above into a re-usable function:</p>
     <span class="n">count_colonies</span><span class="p">(</span><span class="n">image_filename</span><span class="o">=</span><span class="n">image_filename</span><span class="p">)</span>
 </code></pre></div>    </div>
 
-    <p style="display: none;"><img src="./Image Processing with Python_files/colonies-01-summary.png" alt="Colony 1 output">
-<img src="./Image Processing with Python_files/colonies-02-summary.png" alt="Colony 2 output">
-<img src="./Image Processing with Python_files/colonies-03-summary.png" alt="Colony 3 output"></p>
+    <p style="display: none;"><img src="./ImageProcessingWithPython/colonies-01-summary.png" alt="Colony 1 output">
+<img src="./ImageProcessingWithPython/colonies-02-summary.png" alt="Colony 2 output">
+<img src="./ImageProcessingWithPython/colonies-03-summary.png" alt="Colony 3 output"></p>
 
     <p style="display: none;">You’ll notice that for the images with more colonies, the results aren’t perfect.
 For example, some small colonies are missing,
@@ -5297,9 +5297,9 @@ This could be fixed with more complicated segmentation methods
       
     </div>
     
-<script async="" src="./Image Processing with Python_files/matomo.js.download"></script><script src="./Image Processing with Python_files/jquery.min.js.download"></script>
-<script src="./Image Processing with Python_files/bootstrap.min.js.download"></script>
-<script src="./Image Processing with Python_files/lesson.js.download"></script>
+<script async="" src="./ImageProcessingWithPython/matomo.js.download"></script><script src="./ImageProcessingWithPython/jquery.min.js.download"></script>
+<script src="./ImageProcessingWithPython/bootstrap.min.js.download"></script>
+<script src="./ImageProcessingWithPython/lesson.js.download"></script>
 
 
 <!-- Matomo -->
@@ -5323,7 +5323,7 @@ This could be fixed with more complicated segmentation methods
 <!-- End Matomo Code -->
 
 
-<script src="./Image Processing with Python_files/anchor.min.js.download"></script>
+<script src="./ImageProcessingWithPython/anchor.min.js.download"></script>
 <script>
     anchors.add();
 </script>
